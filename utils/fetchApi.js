@@ -2,9 +2,9 @@ import axios from "axios";
 
 
 
-export const baseUrl = 'bayut.p.rapidapi.com'
+export const baseUrl = 'https://bayut.p.rapidapi.com'
 
-export const fetcApi = async(url) =>{
+export const fetchApi = async (url) =>{
     const {data} = await axios.get((url),{
        headers: {
             'X-RapidAPI-Host': 'bayut.p.rapidapi.com',
@@ -12,4 +12,6 @@ export const fetcApi = async(url) =>{
         }
         
     })
+
+    return data
 }
